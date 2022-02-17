@@ -12,7 +12,7 @@
       routeros_command:
 ​
         commands: 
-          - /ppp secret add name= "{{vpnname}}" password= "{{vpnpass}}" service=l2tp profile=L2TP_Profile
+          - /ppp secret add name=sarmen password=AAaa1234 service=l2tp profile=L2TP_Profile
           
       register: system_print
 ​
