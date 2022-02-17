@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Hello') {
       steps {
-        sh 'ansible-playbook -i inventory/mikrotik.host playbook/mikrotik.yml -vvv'
+        sh 'ansible -i inventory/mikrotik.host all -a "uptime" -vvv'
       }
     }
   }
