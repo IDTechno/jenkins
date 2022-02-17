@@ -3,6 +3,7 @@ pipeline {
   stages {
     stage('Hello') {
       steps {
+        sh 'ansible-playbook -i inventory/mikrotik.host all -m ping'
         sh 'ansible -i inventory/mikrotik.host all -m ping'
       }
     }
