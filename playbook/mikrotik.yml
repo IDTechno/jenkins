@@ -1,12 +1,12 @@
 ﻿---
-- name: Getting IP from routers​
-  hosts: routers​
-  gather_facts: false​
-  tasks:​
-    - name: system command​
-      routeros_command:​
-        commands: 
+- name: Getting IP from routers
+  hosts: routers
+  gather_facts: false
+  tasks:
+    - name: system command
+      routeros_command:
+        commands:
           - /ppp secret add name=sarmen password=AAaa1234 service=l2tp profile=L2TP_Profile
-      register: system_print​
-    - name: debug print​
+      register: system_print
+    - name: debug print
       debug: var=system_print.stdout_lines
