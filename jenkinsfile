@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Hello') {
       steps {
-        sh 'ansible-playbook -i inventory/mikrotik.host playbook/mikrotik.yml --extra-vars vpnname=$($env:name) --extra-vars  vpnpass=$($env:pass)'
+        sh 'ansible-playbook -i inventory/mikrotik.host playbook/mikrotik.yml --extra-vars vpnname= $($env:name) --extra-vars  vpnpass= $($env:pass)'
       }
     }
   }
